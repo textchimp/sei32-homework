@@ -12,16 +12,36 @@
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
 
-const secretWord = ['F', 'O', 'X'];
-const guessed = ['_', '_', '_'];
-
-const guessedLetter = function() {
-  for (i = 0; i < secretWord.length; i++) {
-    console.log(secretWord[i]);
-  }
-    if guessedLetter() === secretWord {
-      console.log("yay");
-    }
-}
+// const secretWord = ['F', 'O', 'X'];
+// const guessed = ['_', '_', '_'];
+//
+// const guessedLetter = function() {
+//   for (i = 0; i < secretWord.length; i++) {
+//     console.log(secretWord[i]);
+//   }
+//     if guessedLetter() === secretWord {
+//       console.log("yay");
+//     }
+// }
 
 //This is all Ive got.....
+
+
+const secretWord = ['P', 'E', 'P', 'P', 'E', 'R'];
+const guessedLetters = ['_', '_', '_', '_' '_', '_'];
+
+const guessLetter = function( guessLetter ) {
+
+
+for ( let i = 0; i < secretWord.length; i++) {
+
+  const secretLetter = secretWord[i];
+
+  if( secretLetter === guessLetter ) {
+
+  }
+}
+
+
+
+}
