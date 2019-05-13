@@ -75,24 +75,28 @@ console.log(`The area for a circle with a of radius 2 is : ${areaOfCircle(2)}`);
 // Calculate what percentage that area is of the squared result (#3).
 
 
-//
-// const partTwo = function(num1){
-//   let firstResult = halfNumber(num1);
-//   let secondResult = squareNumber(firstResult);
-//   let thirdResult = areaOfCircle(secondResult);                                /////////////////////Can\'t get this guy to work/////////////////////////////
-//   let theFinalCountdown = percentageOf(thirdResult, secondResult);
-//   return theFinalCountdown;
-//
-//
-//
-//
-// }
-//
-// console.log(`${partTwo(50)}`);
+
+const partTwo = function(num1){
+  let firstResult = halfNumber(num1);
+  // console.log('halved:', firstResult);
+  let squared = squareNumber(firstResult);
+  // console.log('squared:', squared);
+  let area = areaOfCircle(squared);
+  // console.log('area:', area);                                /////////////////////Can\'t get this guy to work/////////////////////////////
+  let theFinalCountdown = percentOf(area, squared);
+  return theFinalCountdown;
 
 
 
-//
+
+}
+
+console.log(`${partTwo(50)}`);
+
+
+//////////////////////////////////////////
+////////Dr. Evil/////////////////////////
+///////////////////////////////////////
 // Create a function called DrEvil. It should take a single argument, an amount,
 // and return ' dollars', except it will add '(pinky)' at the end if the amount is 1 million. For example:
 //   DrEvil(10): 10 dollars
@@ -110,3 +114,45 @@ const drEvil = function(num1){
 
 console.log(drEvil(1000000));
 console.log(drEvil(10));
+
+
+//////////////////////////////////////////////
+///////////////The Mix Up/////////////////////
+/////////////////////////////////////////////
+// Create a function called mixUp. It should take in two strings, and return the concatenation of the two strings
+// (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:
+//
+//   mixUp('mix', 'pod'): 'pox mid'
+//   mixUp('dog', 'dinner'): 'dig donner'
+// Look up the JavaScript string reference to find methods which may be useful!
+
+const mixUp = function(string1, string2){
+  let inputValue = string1;
+  let outputValue = string1.substr(2) + string2.substr(2);
+  return outputValue;
+
+
+
+}
+
+console.log( mixUp('mix','pod') );
+
+
+
+/////////////////////////////////////
+/////////FixStart///////////////////////
+////////////////////////////////////////
+// Create a function called fixStart. It should take a single argument, a string, and return a version where
+// all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
+//
+// fixStart('babble'): 'ba**le'
+
+
+
+const fixStart = function(){
+  let
+
+
+
+
+}
