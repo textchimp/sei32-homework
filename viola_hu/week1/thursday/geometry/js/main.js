@@ -214,7 +214,7 @@ const jsBank = [
 
 //add new accounts
 const addAccount = function(acctName, initBalance) {
-  jsBank[jsBank.length] = {owner:acctName , balance:initBalance}; // .push method!!!!
+  jsBank[jsBank.length] = {owner:acctName , balance:initBalance}; // .push method!!!! make it easier!!!
   return `You've created a new account with accountName of '${acctName}' with balance of $${initBalance}.`
 };
 
@@ -249,8 +249,9 @@ const changeBalance = function (accName,changeAmount){
   }
   if (!accountFound){
     console.log(`Your account doesn't exist.`);
-  }
-}; // at the end of declaring a function, use ; means end of declaration of a variable
+  }// but for 'if' statement or for loop, no need to use ';', they are not variables!!!
+};
+// at the end of declaring a function use ';' meaning end of declaration of a variable like 'let x = 5;'
 
 
 changeBalance('Viola',-5000);
@@ -267,7 +268,6 @@ accounts : [
   {name: , balance: },
 ],
 addAccount: function(),
-
-
-
+showBalance: function(),
+depositOrWithdraw: function() // when calling a function and using this. method
 }
