@@ -39,7 +39,9 @@ const catDance = function(){
 
   cat2.animate({left: '95%'}, 2000, function(){
       cat2.addClass('transformMirror')
-  }).animate({left:'0%'}, 2000);
+    }).animate({left:'0%'}, 2000, function(){
+      cat2.removeClass('transformMirror')
+    });
 
 };
 catDance();
