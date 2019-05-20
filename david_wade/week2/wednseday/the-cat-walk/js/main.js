@@ -62,21 +62,64 @@ console.log('Meow!');
 //////////////////////////////////////////////////////////////////////
 
 
-const $blackCat = $('#blackCat');
-
-$blackCat.css('left', '0px');
-
-const catWalk = function(){
-const start = $blackCat.css('left', '0px');
-let animation = start +='20px'
-return animation;
-
-
-};
-
-
-
-
-
-window.setInterval(catWalk, 1000);
+// const $blackCat = $('#blackCat');
+//
+// $blackCat.css('left', '0px');
+//
+// const catWalk = function(){
+// const start = $blackCat.css('left', '0px');
+// let animation = start +='20px'
+// return animation;
+//
+//
+// };
+//
+//
+//
+//
+//
+// window.setInterval(catWalk, 1000);
 ///////////////////////////////////////////////////////////////
+
+const $catOne = $("#catOne");
+const $catTwo = $("#catTwo");
+const $catThree = $("#catThree")
+
+
+
+$(document).ready(function() {
+
+  const catWalk = function() {
+    $catOne.animate({
+      left: "1000",
+      transform: 'translateY(200px) rotateZ(280deg)',
+      right: "1000",
+      scaleX: "-1"
+    });
+
+
+
+
+
+
+    // $catTwo.animate({bottom: "0"});
+    // $catTwo.animate({left: "60%"});
+    //
+    // $catThree.animate({bottom: "0"});
+    // $catThree.animate({left: "80%"});
+
+
+  }
+  window.setInterval(catWalk, 1000);
+
+
+
+
+
+
+
+
+
+
+
+})/////end of code
