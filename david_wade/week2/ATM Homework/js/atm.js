@@ -4,20 +4,8 @@ const balance = {
   checking: 100,
   savings: 50,
 };
-//sum of both accounts
-const totalFunds = function(){
-(balance.checking) + (balance.savings);
-};
 
-
-
-//is total amount greater than withdrawl
-const overdraw = function(){
-  if ( totalFunds() === 0){
-    console.log('no funds!');
-  }
-};
-
+let checkingAmount = parseInt( $('#checkingAmount').val() );
 
 const negFunds = function (account){
   if (balance[account] > 0 ) {
@@ -35,6 +23,19 @@ $(document).ready(function() {
   $('#balance1').html('$' + balance.checking);
   $('#balance2').html('$' + balance.savings);
 
+  //sum of both accounts
+  const totalFunds = function(){
+  (balance.checking) + (balance.savings);
+  };
+
+  //is total amount greater than withdrawl
+  const overdraw = function(){
+      console.log(checkingAmount);
+      if ( totalFunds() <= checkingAmount ) {
+        console.log('no funds');
+      };
+
+  };
 
 
 //deposit function
@@ -90,7 +91,7 @@ $('#savingsWithdraw').on('click', function(){
   withdrawl('savings', amount);
   $('#balance2').html('$' + balance.savings);
   negFunds('savings');
-
+  overdraw();
 });
 
 
