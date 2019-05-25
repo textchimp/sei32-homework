@@ -1,66 +1,98 @@
-$(document).ready(function() {
-
-// // Keep track of the checking and savings balances somewhere
-// const $checkingBalance = $("#balance1").html();
-// const $savingsBalance = $("#balance2").html();
-//
-// // Add functionality so that a user can deposit money into one of the bank accounts.
-//  const checkingBalance = function(){
-//   return checkingBalance += $("#checkingAmount").attr("placeholder");
-//
-// };
-//
-// // Make sure you are updating the display and manipulating the HTML of the page so a user can see the change.
-//
-//
-//
-//
-//
 
 // Keep track of the checking and savings balances somewhere
 const balance = {
-  checking: '100',
-  savings: '50'
+  checking: 100,
+  savings: 50,
+};
+//sum of both accounts
+const totalFunds = (balance.checking) + (balance.savings);
+
+
+
+
+//is total amount greater than withdrawl
+const overdraw = function(){
+  if( posTotal ) {
+    console.log('still got money remaining');
+  }
+  if ( !posTotal ) {
+    console.log('no funds!');
 };
 
-//const var for acessing balance object checking key
-const checkingBalance = balance.checking;
-//const var for accessing balance object savings key
-const savingsBalance = balance.savings;
 
-// Add functionality so that a user can deposit money into one of the bank accounts.
+const negFunds = function (account){
+  if (balance[account] > 0 ) {
+    return ;
+  }
+  else {
+    $('.balance').css('background-color', 'red');
+  }
+};
 
+
+$(document).ready(function() {
+
+  //displays balance const in $('#balance1') and $('#balance2') node
+  $('#balance1').html('$' + balance.checking);
+  $('#balance2').html('$' + balance.savings);
+
+
+
+//deposit function
 const deposit = function (checkOrSavings, depositAmount) {
-  let sum = balance.account[checkOrSavings] += depositAmount;
-  return sum;
+  balance[checkOrSavings] += depositAmount;
+  return  balance[checkOrSavings];
 };
 
-// Make sure you are updating the display and manipulating the HTML of the page so a user can see the change.
 
-//displays balance const in $('#balance1') and $('#balance2') node
 
-$('#balance1').append(balance.checking);
-$('#balance2').append(balance.savings);
-
-// Add functionality so that a user can withdraw money from one of the bank accounts
-
+//withdrawl function
 const withdrawl = function (checkOrSavings, withdrawlAmount) {
-  let sum = balance.checkOrSavings -= withdrawlAmount;
+  let sum = balance[checkOrSavings] -= withdrawlAmount;
   return sum;
 
 };
 
 
-
-//selects checking input placeholder box
-const checkingMinusFunds = $('#balance1[placeholder="enter an amount"]');
-
-//selects checking input placeholder text
-checkingMinusFunds.innerHTML
-
-
+//checking deposit function
+$('#checkingDeposit').on('click', function(){
+  const amount = parseInt( $('#checkingAmount').val() );
+  // console.log(amount);
+  deposit('checking', amount);
+  $('#balance1').html('$' + balance.checking);
 
 
+
+});//checkingDeposit function ends here
+
+//checking withdrawl function
+$('#checkingWithdraw').on('click', function(){
+  const amount = parseInt( $('#checkingAmount').val() );
+
+  withdrawl('checking', amount);
+  $('#balance1').html('$' + balance.checking);
+  negFunds('checking');
+  overdraw();
+});//end of checkWithdrawl
+
+//savings deposit function
+$('#savingsDeposit').on('click', function(){
+  const amount = parseInt( $('#savingsAmount').val() );
+
+  deposit('savings', amount);
+  $('#balance2').html('$' + balance.savings);
+
+
+});
+
+$('#savingsWithdraw').on('click', function(){
+  const amount = parseInt( $('#savingsAmount').val() );
+
+  withdrawl('savings', amount);
+  $('#balance2').html('$' + balance.savings);
+  negFunds('savings');
+
+});
 
 
 
