@@ -5,18 +5,17 @@ const balance = {
   savings: 50,
 };
 //sum of both accounts
-const totalFunds = (balance.checking) + (balance.savings);
-
+const totalFunds = function(){
+(balance.checking) + (balance.savings);
+};
 
 
 
 //is total amount greater than withdrawl
 const overdraw = function(){
-  if( posTotal ) {
-    console.log('still got money remaining');
-  }
-  if ( !posTotal ) {
+  if ( totalFunds() === 0){
     console.log('no funds!');
+  }
 };
 
 
