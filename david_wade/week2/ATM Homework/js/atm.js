@@ -5,8 +5,6 @@ const balance = {
   savings: 50,
 };
 
-let checkingAmount = parseInt( $('#checkingAmount').val() );
-
 const negFunds = function (account){
   if (balance[account] > 0 ) {
     return ;
@@ -25,17 +23,22 @@ $(document).ready(function() {
 
   //sum of both accounts
   const totalFunds = function(){
-  (balance.checking) + (balance.savings);
+    return (balance.checking) + (balance.savings);
   };
 
   //is total amount greater than withdrawl
-  const overdraw = function(){
-      console.log(checkingAmount);
-      if ( totalFunds() <= checkingAmount ) {
-        console.log('no funds');
-      };
+  const overdraw = function(id, account){
+    if ( parseInt( $('#checkingAmount').val() ) >  totalFunds() ) {
+      console.log('no funds');
 
+        return  $(id).html(balance[account]);
+    };
   };
+
+
+
+
+
 
 
 //deposit function
@@ -56,6 +59,8 @@ const withdrawl = function (checkOrSavings, withdrawlAmount) {
 
 //checking deposit function
 $('#checkingDeposit').on('click', function(){
+  overdraw($('#balance1'), 'checking');
+
   const amount = parseInt( $('#checkingAmount').val() );
   // console.log(amount);
   deposit('checking', amount);
@@ -67,15 +72,16 @@ $('#checkingDeposit').on('click', function(){
 
 //checking withdrawl function
 $('#checkingWithdraw').on('click', function(){
+  overdraw($('#balance1'), 'checking');
   const amount = parseInt( $('#checkingAmount').val() );
 
   withdrawl('checking', amount);
   $('#balance1').html('$' + balance.checking);
   negFunds('checking');
-  overdraw();
 });//end of checkWithdrawl
 
 //savings deposit function
+overdraw($('#balance2'), 'savings');
 $('#savingsDeposit').on('click', function(){
   const amount = parseInt( $('#savingsAmount').val() );
 
@@ -86,12 +92,12 @@ $('#savingsDeposit').on('click', function(){
 });
 
 $('#savingsWithdraw').on('click', function(){
+  overdraw($('#balance2'), 'savings');
   const amount = parseInt( $('#savingsAmount').val() );
 
   withdrawl('savings', amount);
   $('#balance2').html('$' + balance.savings);
   negFunds('savings');
-  overdraw();
 });
 
 
