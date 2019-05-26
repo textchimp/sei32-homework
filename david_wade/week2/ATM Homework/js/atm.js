@@ -29,11 +29,13 @@ $(document).ready(function() {
   //is total amount greater than withdrawl
   const overdraw = function(id, account){
     if ( parseInt( $('#checkingAmount').val() ) >  totalFunds() ) {
-      console.log('no funds');
-
-        return  $(id).html(balance[account]);
-    };
-  };
+      let posBalance = false;
+        return;
+    }
+    if ( parseInt( $('#checkingAmount').val() ) <  totalFunds() ) {
+      let posBalance = true;
+   };
+};
 
 
 

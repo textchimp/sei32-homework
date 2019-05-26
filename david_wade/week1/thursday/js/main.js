@@ -125,3 +125,76 @@ console.log(triangleArea(triangle));
 // // isObtuse(tri) - Returns whether the triangle is obtuse or not
 // As above, these functions should take a single object as an argument, which will have the same keys
 // as the triangle above, and which you will use for your calcuations.
+
+
+//
+// The Cash Register
+// Write a function called cashRegister that takes a shopping cart object. The object contains item names and prices (itemName: itemPrice). The function should return the total price of the shopping cart. Example
+//
+// // Input
+// const cartForParty = {
+//   banana: "1.25",
+//   handkerchief: ".99",
+//   Tshirt: "25.01",
+//   apple: "0.60",
+//   nalgene: "10.34",
+//   proteinShake: "22.36"
+// };
+//
+// // Output
+// cashRegister(cartForParty)); // 60.55
+
+
+
+// const cartForParty = {
+//   banana: "1.25",
+//   handkerchief: ".99",
+//   Tshirt: "25.01",
+//   apple: "0.60",
+//   nalgene: "10.34",
+//   proteinShake: "22.36"
+// };
+
+
+// const cashRegister = function () {
+//   for ( let key in cartForParty ) {
+//   console.log(`${cashRegister()}`);
+// }
+// };//end of cashRegister()
+
+
+const cakeMix = {
+  flour: 2.0,
+  eggs: 3.20,
+  milk: 1.25,
+  sugar: 3.65,
+  chocolate: 5.5
+}; //end of object
+//////////////////////////////// ask luke about this
+// const cakeMix = {
+//   flour: '2.0',
+//   eggs: '3.20',
+//   milk: '1.25',
+//   sugar: '3.65',
+//   chocolate: '5.5'
+// }; //end of object
+
+// const cashRegister = function () {
+// for ( let key in cakeMix ) {
+// console.log(`${key} ${cakeMix[key]}`);
+// };//end of for key loop
+// };//end of cashRegister()
+
+    // const totalCost = Object.values(cakeMix);
+    // // const convertToInteger = totalCost.reduce()
+
+const cashRegister = function(obj) {
+  let total = 0;
+  for ( let key in obj )
+  total += obj[key];
+  return total;
+
+
+};//end of cashRegister()
+
+console.log(cashRegister(cakeMix));
