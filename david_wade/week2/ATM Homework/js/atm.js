@@ -27,14 +27,12 @@ $(document).ready(function() {
   };
 
   //is total amount greater than withdrawl
-  const overdraw = function(id, account){
-    if ( parseInt( $('#checkingAmount').val() ) >  totalFunds() ) {
-      let posBalance = false;
-        return;
-    }
-    if ( parseInt( $('#checkingAmount').val() ) <  totalFunds() ) {
-      let posBalance = true;
-   };
+  const overdraw = function(id) {
+    if ( parseInt( $(id).val() ) >  totalFunds() ) {
+        return true;
+    } else {
+      return false;
+    };
 };
 
 
@@ -61,7 +59,9 @@ const withdrawl = function (checkOrSavings, withdrawlAmount) {
 
 //checking deposit function
 $('#checkingDeposit').on('click', function(){
-  overdraw($('#balance1'), 'checking');
+  if ( overdraw('#checkingAmount') === true ){
+    return;
+  };
 
   const amount = parseInt( $('#checkingAmount').val() );
   // console.log(amount);
@@ -74,7 +74,9 @@ $('#checkingDeposit').on('click', function(){
 
 //checking withdrawl function
 $('#checkingWithdraw').on('click', function(){
-  overdraw($('#balance1'), 'checking');
+  if ( overdraw('#checkingAmount') === true){
+    return;
+  };
   const amount = parseInt( $('#checkingAmount').val() );
 
   withdrawl('checking', amount);
@@ -83,8 +85,10 @@ $('#checkingWithdraw').on('click', function(){
 });//end of checkWithdrawl
 
 //savings deposit function
-overdraw($('#balance2'), 'savings');
 $('#savingsDeposit').on('click', function(){
+  if ( overdraw('#savingsAmount') === true ){
+    return;
+  };
   const amount = parseInt( $('#savingsAmount').val() );
 
   deposit('savings', amount);
@@ -94,7 +98,9 @@ $('#savingsDeposit').on('click', function(){
 });
 
 $('#savingsWithdraw').on('click', function(){
-  overdraw($('#balance2'), 'savings');
+  if ( overdraw('#savingsAmount') === true ){
+    return;
+  };
   const amount = parseInt( $('#savingsAmount').val() );
 
   withdrawl('savings', amount);
