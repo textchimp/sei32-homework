@@ -26,18 +26,26 @@ $(document).ready(function() {
     return (balance.checking) + (balance.savings);
   };
 
-  //is total amount greater than withdrawl
+  //takes value amount requested to be withdrawn and asks whether or not the total balance is sufficient to make transation.
   const overdraw = function(id) {
     if ( parseInt( $(id).val() ) >  totalFunds() ) {
-        return true;
-    } else {
+      return true;
+  } else {
       return false;
-    };
+  };
 };
 
 
+  //if checkingAmount > #balance1, check to see if #balance2 has remainder if not, no withdrawl for you!....next!
 
-
+  //subtract funds from savings and transfer to checking
+  //total of #balance2
+  console.log(`Balance of savings : $${balance.savings}`);
+  //reasigning value of balance[key]
+  // balance.checking = 150;
+  // balance.savings -= 50;
+  // const totalBalance = balance.checking + balance.savings;
+  // let negBal = totalBalance - balance.checking;
 
 
 
@@ -59,9 +67,6 @@ const withdrawl = function (checkOrSavings, withdrawlAmount) {
 
 //checking deposit function
 $('#checkingDeposit').on('click', function(){
-  if ( overdraw('#checkingAmount') === true ){
-    return;
-  };
 
   const amount = parseInt( $('#checkingAmount').val() );
   // console.log(amount);
@@ -86,9 +91,7 @@ $('#checkingWithdraw').on('click', function(){
 
 //savings deposit function
 $('#savingsDeposit').on('click', function(){
-  if ( overdraw('#savingsAmount') === true ){
-    return;
-  };
+
   const amount = parseInt( $('#savingsAmount').val() );
 
   deposit('savings', amount);
@@ -107,6 +110,7 @@ $('#savingsWithdraw').on('click', function(){
   $('#balance2').html('$' + balance.savings);
   negFunds('savings');
 });
+
 
 
 

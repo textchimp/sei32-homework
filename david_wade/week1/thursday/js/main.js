@@ -201,7 +201,7 @@ console.log(cashRegister(cakeMix));
 
 
 
-// 
+//
 // JavaScript Bank
 // In this homework, you'll create a basic bank in Javascript. The bank has many accounts and the following capabilities that you need to write.
 //
@@ -301,17 +301,28 @@ console.log(cashRegister(cakeMix));
 // 1111-1111-1111-1110 sum less than 16
 // 6666-6666-6666-6661 odd final number
 
-const sumOfAllDigits = function (creditNum) {
-  let total = 0;
+// let number = 9999-9999-8888-0000
+//
+// const sumOfAllDigits = function (creditNum) {
+//   let total = 0;
+//
+//
+// }
 
 
+var number = 12354987,
+    output = [],
+    sNumber = number.toString();
+
+for (var i = 0, len = sNumber.length; i < len; i += 1) {
+    output.push(+sNumber.charAt(i));
 }
 
+console.log(output);
 
 
-
-
-const validateCreditCard = function (creditNum) {
-  if ( creditNum )
-
-}//end of validateCreditCard()
+//
+// const validateCreditCard = function (creditNum) {
+//   if ( creditNum )
+//
+// }//end of validateCreditCard()
