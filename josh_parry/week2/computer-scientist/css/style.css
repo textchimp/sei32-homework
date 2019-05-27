@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Sura|Ultra');
+
+body {
+  background-color: hotpink;
+  margin: 0; /* no margins on the whole thing */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-boz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 40px;
+  color: #F0EBF4;
+  margin-left: 36px;
+}
+
+#topNav {
+  background-color: white;
+  height: 100px;
+  font-family: 'Ultra', serif;
+}
+
+#topNav ul {
+  list-style: none; /* gets rid of the bullet points */
+  margin: 3px;
+  padding-left: 19px;
+  font-size: 30px
+  height: 100%;
+}
+
+#topNav li {
+  display: inline-block; /* Puts them inline */
+  margin-right: 30px;
+  height: 100%;
+
+}
+
+#topNav div {
+  display: inline-block;
+  padding: 15px;
+  color: #A1C3D1;
+}
+
+#topNav a {
+  text-decoration: none;
+  color: #A1C3D1;
+  font-size: 40px;
+  height: 100%;
+}
+
+#topNav a:hover {
+  background-color: hotpink;
+  color: #F0EBF4;
+  /* padding: 100px; */
+}
+
+.leftNav {
+  width: 80%;
+  height: 100%;
+}
+
+.rightNav {
+  width: 20%;
+  text-align: right;
+}
+
+.rightNav img {
+  width: 35px;
+  height: 35px;
+}
+
+#container div {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+#machinesThinkQuote {
+  text-align: center;
+  width: 50%;
+  font-size: 50px;
+  color: #F0EBF4;
+  margin: 90px 24px 24px 200px;
+  font-family: 'IM Fell DW Pica SC', serif;
+
+
+}
+
+.alanPicture img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  max-width: 100%;
+  max-height:100%;
+  /* background-color: hotpink; */
+}
