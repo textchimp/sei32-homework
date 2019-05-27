@@ -311,7 +311,23 @@ console.log(`JavaScript Bank`);
 //   },
 // ];
 
+const bank = {
+accounts: [
+  {name: Josh, balance:500},
+  {name: Bob, balance: 500}
+],
+addAcount: function(accountName, startingBalance),
 
+
+
+
+
+}
+
+bank.push
+
+
+//methods outside the ob
 
 // // print current balance in console
 // bank[1].printBalance();
@@ -407,31 +423,35 @@ const divisibleBy400 = function( year ){
 // A /4
 // B
 
-const divisibleBy4 = function( year ){
-  if (year % 4 === 0) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// const divisibleBy4 = function( year ){
+//   if (year % 4 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+//
+// const notDivisibleBy100 = function( year ){
+//   if (year % 100 !== 0) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+// };
+//
+// const divisibleBy400 = function( year ){
+//   if (year % 400){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
-const notDivisibleBy100 = function( year ){
-  if (year % 100 !== 0) {
-      return true;
-    } else {
-      return false;
-    }
-};
+// const isDivisibleBy = function(num, divisor){
+//   return num % divisor === 0;
+// }
 
-const divisibleBy400 = function( year ){
-  if (year % 400){
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const isLeapYear = function( year ){
+const isLeapYear = function(year){
 
 return ( divisibleBy4(year) && (notDivisibleBy100(year) || divisibleBy400(year)) )
 };
@@ -451,7 +471,7 @@ return ( divisibleBy4(year) && (notDivisibleBy100(year) || divisibleBy400(year))
 // console.log(`Is 1990 this a leap year`, isLeapYear(1990));
 // console.log(`Is 2000 this a leap year`, isLeapYear(2000));
 
-
+// this is the one that works
 // const isLeapYear = function(year){
 //   if( year % 4 === 0) {
 //     if (year % 100 !==0 || year % 400 === 0) {
