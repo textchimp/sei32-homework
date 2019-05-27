@@ -1,0 +1,25 @@
+put image into div to make block element
+image default sit next to each other
+
+float element
+
+footer
+
+-> in css can specify a selector using [] of that html's attribute
+img[src=""]{
+
+}
+-> better use ID selector
+
+div.classSelector img{
+  css rule
+}
+
+center the whole thing
+margin: 0 auto;
+
+not to specify body/div with fixed px, what if that's a phone, better use %
+
+wrap something in a div, and set rules to the div to center the whole div body
+
+mockup - 模型！

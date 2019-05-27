@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* site-wide style */
+
+/* li {
+  background-color: rgba(167, 23, 15, 1);
+} */
+
+/* welcome.html */
+
+#words {
+  position: absolute;
+  top: 15%;
+  display: none;
+  /* opacity: 0;
+  display: inline-block;
+  transition: opacity 1s linear; */
+}
+
+.word {
+  font-size: 10px;
+  color: #57545B;
+  position: fixed;
+  opacity: 0.25;
+}
+
+
+audio {
+  position: fixed;
+  right: 0%;
+}
+
+form {
+  position: fixed;
+  top: 5%;
+  left: 45%;
+}
+
+pre {
+  font-size: 20px;
+  line-height: 1.8;
+  animation: 8s infinite alternate slidein;
+}
+
+#hisName {
+  position: fixed;
+  top: 15%;
+  left: 5%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+#preciousRuby{
+  position: fixed;
+  top: 15%;
+  left: 5%;
+}
+
+
+
+#welcomeRuby {
+  margin: 25% 50% 25% 50%;
+  width: 10%;
+  height: 10%;
+  transition: 3s;
+  transform: rotate(360deg);
+}
+
+/* @keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+} */
+
+
+/* index.html */
+
+#duckQuiet {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  width: 200px;
+  height: 200px;
+}
+
+/* biography.html */
+
+/* media.html */
+
+/* trivia.html */
+
+/* secretrewards.html */
+
+
+body{
+  background-color: #61C7D8;
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+}
+
+#secretRuby {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 80px;
+  height: 80px;
+  transition: 1s;
+}
+
+img:hover {
+  transform: rotate(360deg);
+}
+
+
+h1 {
+color: #FDDBC6;
+font-size: 1.5em;
+display: inline-block;
+position: absolute;
+top: 20%;
+
+text-align: center;
+}
+
+nav {
+  background-color: #FDDBC6;
+  height: 100px;
+  font-size: 20px;
+}
+
+#topNav {
+  background-color: #FDDBC6;
+  color: white;
+  height: 100px;
+  width: 100%;
+  top: 0px;
+}
+
+#topNav div {
+  display: inline-block;
+}
+
+#topNav ul {
+  list-style: none;
+}
+
+#topNav li {
+  display: inline-block;
+  padding: 10px 20px 10px 0px;
+}
+
+.leftNav {
+  width: 50%;
+}
+
+.rightNav {
+  width: 50%;
+  text-align: right;
+}
+
+a{
+  text-decoration: none;
+  color: #61C7D8;
+}
+
+a:hover {
+  color: #61C7D8;
+  text-decoration: underline;
+}
