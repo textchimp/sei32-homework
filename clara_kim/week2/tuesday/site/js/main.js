@@ -1,5 +1,11 @@
 // --- welcome.html --- //
 
+console.log('hello')
+
+// Ruby rotation and fade
+//
+// const rubyRotate = function()
+
 
 // show random words using jQuery
 
@@ -9,7 +15,7 @@ const divContents = $('#words').text(); //node.innerText
 
 const words = divContents.split('');
 // const words = divContents.split(/[_:;.,?"'\-\n]+/); //use a regex to specify a range of characters to split on
-  console.log(words);
+console.log(words);
 
 const randRange = function(max){
     return Math.floor(Math.random()*max);
