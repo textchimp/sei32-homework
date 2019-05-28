@@ -38,13 +38,8 @@ def raindrops( number )
   output   # return output string from function
 end  # raindrops()
 
-print "input 6: "
-puts raindrops(6)
-print "input 10: "
-puts raindrops(10)
-print "input 28: "
-puts raindrops(28)
-print "input 1755: "
-puts raindrops(1755)
-print "input 34: "
-puts raindrops(34)
+puts "input 6: ", raindrops(6)
+puts "input 10: ", raindrops(10)
+puts "input 28: ", raindrops(28)
+puts "input 1755: ", raindrops(1755)
+puts "input 34: ", raindrops(34)
