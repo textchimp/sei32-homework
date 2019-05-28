@@ -27,6 +27,7 @@
 
 # methods
 def menu
+# google ruby multi-line
   puts "Choose an operation or quit:"
   puts "1 +"
   puts "2 -"
@@ -43,31 +44,31 @@ end
 
 
 def add (num1, num2)
-  return "#{num1} + #{num2} = #{num1 + num2}"
+  "#{num1} + #{num2} = #{num1 + num2}"
 end
 
 def subtract (num1, num2)
-  return "#{num1} - #{num2} = #{num1 - num2}"
+  "#{num1} - #{num2} = #{num1 - num2}"
 end
 
 def multiply (num1, num2)
-  return "#{num1} x #{num2} = #{num1 * num2}"
+  "#{num1} x #{num2} = #{num1 * num2}"
 end
 
 def divide (num1, num2)
-  return "#{num1} / #{num2} = #{num1 / num2}"
+  "#{num1} / #{num2} = #{num1 / num2}"
 end
 
 def exponent (num1, num2)
-  return "#{num1}^#{num2} = #{num1**num2}"
+  "#{num1}^#{num2} = #{num1**num2}"
 end
 
 def square_root (num1)
-  return "√#{num1} = #{Math.sqrt(num1)}"
+  "√#{num1} = #{Math.sqrt(num1)}"
 end
 
 def bmi (weight, height)
-  return "Your BMI is #{(weight/height**2*10000).round(2)}"
+  "Your BMI is #{(weight/height**2*10000).round(2)}"
 end
 
 # loop through menu unless you choose to quit
@@ -80,10 +81,11 @@ until operation == 10
   operation = gets.to_i
 
   # 7 is to quit loop
-  if operation > 0 && operation < 7
+  case operation
+  when 0...7 
 
     print "Enter first number: "
-    first_num = gets.to_f
+    first_num = gets.to_f #turn into function
 
     # square root only requires one value
     unless operation == 6
@@ -102,13 +104,11 @@ until operation == 10
     end
 
     puts "Answer: #{calculate}"
-  end
 
-  if operation == 7
+  when 7 # elsif
     puts "This method is not yet supported"
-  end
 
-  if operation == 8
+  when 8
     print "Enter weight (kg): "
     weight = gets.to_f
 
@@ -120,7 +120,7 @@ until operation == 10
     puts "#{your_bmi}"
   end
 
-  # if operation == 9 
+  # if operation == 9
   #   print "Enter distance (km): "
   #   distance = gets.to_f
   #
@@ -136,10 +136,7 @@ until operation == 10
   #
 
 
-    # distance
-    # miles per gallon
-    # price per gallon
-    # speed in miles per hour
+
 end
 
 
