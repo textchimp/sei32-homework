@@ -1,3 +1,79 @@
+// If Then homeworl
+// What number's bigger?
+//
+// Write an if statement that tests two number (numOne and numTwo), and prints the biggest number
+console.log(`What number is bigger?`);
+
+const numOne = 5;
+const numTwo = 7;
+
+if (numOne === numTwo){
+  console.log(`These numbers are equal`);
+} else if (numOne > numTwo) {
+  console.log(numOne);
+} else {
+  console.log(numTwo);
+};
+
+
+
+// The World Translator
+//
+// Write an if statement that writes Hello World in different languages (i.e. if the language is english, write Hello World, if the language is French write something romantic)
+//
+
+console.log(`The World Translator`);
+const language = `Spanish`;
+
+if (language === `English`) {
+  console.log(`Hello World`);
+} else if (language === `French`) {
+  console.log(`Bonjour fromage`);
+} else {console.log(`Not yet programmed for ${language}`)
+};
+
+// The Grade Assigner
+//
+// Write an if statement that gives users a score (A, B, C, D, or F) based on the test results
+
+console.log(`The Grade Assigner`);
+
+const score = 70;
+
+if (score >= 90){
+  console.log(`Grade: A`);
+} else if (score >= 80) {
+  console.log(`Grade: B`);
+} else if (score >= 70) {
+  console.log(`Grade: C`);
+} else if (score >= 60) {
+  console.log(`Grade: D`);
+} else {
+  console.log(`Grade: F`);
+};
+
+
+//
+// The Pluralizer
+//
+// Write an if statement that works with a noun and a number. Make the noun plural if necessary!!
+
+
+console.log(`The Pluralizer`);
+
+const num = 70;
+const noun = `cat`;
+
+if (num === 1){
+  console.log(`${num} ${noun}`);
+} else if (num > 1) {
+  console.log(`${num} ${noun}s`);
+} else {
+  console.log(`No ${noun}s`);
+};
+
+
+
 console.log('The Calculator: Part 1');
 
 // The Calculator
@@ -16,7 +92,7 @@ const calcSquareNumber = function (x) {
 const squareNumber = calcSquareNumber(3);
 console.log(`The result of squaring number 3 is ${squareNumber}.`);
 
-// //or is this syntax better?
+// //or is this syntax better? I think it's best just to return the value, this allows for more flexibility
 //
 // const squareNumberAlt = function (x) {
 //   const squareNumberResult = x**2;
@@ -42,18 +118,22 @@ console.log(`Half of 5 is ${halfNumber1}.`);
 
 const calcPercentOf = function(x, y){
   return x/y*100;
-};
+  };
 
 const percentOf1 = calcPercentOf(2, 4);
 console.log(`2 is ${percentOf1}﹪ of 4.`);
+
+//can save variable as per above or insert directly in to console.log statement
+console.log(`2 is ${calcPercentOf(2, 4)}﹪ of 4.`);
 
 // next function
 
 const calcAreaOfCircle = function(r){
   return Math.PI*r**2;
-};
+  };
 
 const areaOfCircle1 = calcAreaOfCircle(2);
+
 console.log(`The area of a circle with radius 2 is ${areaOfCircle1.toFixed(2)}`);
 //Bonus: Round the result so there are only two digits after the decimal.
 
@@ -113,29 +193,66 @@ console.log(amount3);
 // Look up the JavaScript string reference to find methods which may be useful!
 
 const mixUp = function(firstWord, secondWord){
-     console.log(`${firstWord.slice(0, 2)}${secondWord.slice(2)} ${secondWord.slice(0, 2)}${firstWord.slice(2)}`);
-};
+     console.log(`${secondWord.slice(0, 2)}${firstWord.slice(2)} ${firstWord.slice(0, 2)}${secondWord.slice(2)}`);
+   };
 
 mixUp('dog','dinner');
 mixUp('mix', 'pod');
 
 
-
-//FixStart
+console.log('FixStart')
 //
 // Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
 //
 // fixStart('babble'): 'ba**le'
 
+const fixStart = function(stringy){
+// find first letter
+   const firstLetter = stringy.charAt(0);
+// replace all firstLetter with *
 
-// Verbing
-//
+   const replaceLetters = stringy.replace(new RegExp(firstLetter,`g`),`*`); //'g' means global i.e find all firstLetters
+
+// Replace first letter(i.e. first * with firstLetter)
+
+   const insertBackFirstLetter = replaceLetters.replace(`*`, firstLetter);
+   console.log(insertBackFirstLetter);
+};
+
+fixStart(`babble`);
+
+
+console.log(`Verbing`);
+
+
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
 //
 //   verbing('swim'): 'swimming'
 //   verbing('swimming'): 'swimmingly'
 //   verbing('go'): 'go'
-// Not Bad
+
+const verbing = function( wordToVerb ){
+// if > 3 then leave alone
+  if ( wordToVerb.length < 3 ){
+    return wordToVerb;
+  } else if ( wordToVerb.endsWith('ing') ){
+  //   if it ends in ing then add ly
+    return wordToVerb.concat('ly');
+   return wordTo
+  } else {
+  // if it ends in ing then add ly
+    return wordToVerb.concat('ing');
+  }
+};
+
+console.log(verbing(`go`));
+console.log(verbing(`swim`));
+console.log(verbing(`swimming`));
+
+
+
+
+console.log('Not Bad');
 //
 // Create a function called notBad that takes a single argument, a string.
 //
@@ -148,81 +265,25 @@ mixUp('mix', 'pod');
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 
+const notBad = function(sentence){
 
-// If Then homeworl
-// What number's bigger?
-//
-// Write an if statement that tests two number (numOne and numTwo), and prints the biggest number
-console.log(`What number is bigger?`);
+  if (sentence.match(`not(.*)bad`)){
+  // if not comes before bad then replace everything between not and bad with good
+  return sentence.replace(/not.*bad/, 'good'); // read about regres I don't understand this syntax pattern but it works
 
-const numOne = 5;
-const numTwo = 7;
+//const newSentence = sentence.replace(substringToReplace, 'good');
+//return newSentence;
 
-if (numOne === numTwo){
-  console.log(`These numbers are equal`);
-} else if (numOne > numTwo) {
-  console.log(numOne);
-} else {
-  console.log(numTwo);
+  } else {
+  // or else return original sentence
+  return sentence;
+  }
+
 };
 
-
-
-// The World Translator
-//
-// Write an if statement that writes Hello World in different languages (i.e. if the language is english, write Hello World, if the language is French write something romantic)
-//
-
-console.log(`The World Translator`);
-const language = `Spanish`;
-
-if (language === `English`) {
-  console.log(`Hello World`);
-} else if (language === `French`) {
-  console.log(`Bonjour fromage`);
-} else {console.log(`Not yet programmed for ${language}`)
-};
-
-// The Grade Assigner
-//
-// Write an if statement that gives users a score (A, B, C, D, or F) based on the test results
-
-console.log(`The Grade Assigner`);
-
-const score = 20;
-
-if (score >= 90){
-  console.log(`Grade: A`);
-} else if (score >= 80) {
-  console.log(`Grade: B`);
-} else if (score >= 70) {
-  console.log(`Grade: C`);
-} else if (score >= 60) {
-  console.log(`Grade: D`);
-} else {
-  console.log(`Grade: F`);
-};
-
-
-//
-// The Pluralizer
-//
-// Write an if statement that works with a noun and a number. Make the noun plural if necessary!!
-
-
-console.log(`The Pluralizer`);
-
-const num = 0;
-const noun = `cat`;
-
-if (num === 1){
-  console.log(`${num} ${noun}`);
-} else if (num > 1) {
-  console.log(`${num} ${noun}s`);
-} else {
-  console.log(`No ${noun}s`);
-};
-
+console.log(notBad('This dinner is not that bad!'));
+console.log(notBad('This movie is not so bad!'));
+console.log(notBad('This dinner is bad!'));
 
 //
 // Warmup - Raindrops

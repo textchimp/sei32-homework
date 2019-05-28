@@ -11,7 +11,13 @@ let trainLines = {
 const numberOfStops = function(lineName) {
   let howManyStations = trainLines[lineName].length;
   return howManyStations;
-}
+};
+
+const unionSquareInterchange = function(line) {
+  if ( trainLines[line].includes('Union Square') ) {
+    console.log(`you pass through Union Square`);
+  };
+};
 
 console.log(`number of stops in nLine is 6`);
 console.log(`actual answer is ${numberOfStops('nLine')}`);
@@ -93,3 +99,8 @@ console.log(  '--------------------list of index\'s------------' );
 
 
 //####planTrip('N', 'Times Square', '6', '33rd');#####
+
+
+for( let key in trainLines ) {
+  console.log(`${trainLines[key]}`);
+};
