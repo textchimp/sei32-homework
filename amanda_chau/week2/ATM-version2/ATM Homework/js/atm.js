@@ -5,8 +5,8 @@ console.log('GA ATM App');
 
 const bank = {
   'accounts': {
-    'savings': 58,
-    'checkings': 1999,
+    'savings': 2000,
+    'checkings': 100,
   },// end of accounts
   // find key within accounts and print balance of either savings or checkings
   // use . or [] to access keys within objects [''] required if you want to pass it through a function
@@ -36,7 +36,7 @@ const bank = {
 
     } else {
     // if overdraft is not possible
-      this.accounts[pickAccount];
+      this.accounts[pickAccount]; // can delete, does nothing
     }
   },
 
@@ -118,7 +118,7 @@ $('#checkingWithdraw').on('click', function(){
 //find new total
   bank.withdraw('checkings', amount);
 // change checkings balance
-  $('#balance1').html(`$${bank.accounts.checkings.toFixed(2)}`);
+  $('#balance1').html(`$${bank.accounts.checkings.toFixed(2)}`); //put in update UI function OR can also use an array to store new balance
 
   $('#balance2').html(`$${bank.accounts.savings.toFixed(2)}`);
 
@@ -165,7 +165,8 @@ $('#savingsWithdraw').on('click', function(){
 
 
 
-
+//input type = number (accepts number values only)
+//can try making this in vue
 
 
 

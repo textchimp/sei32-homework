@@ -44,6 +44,8 @@ const catDance = function(){
     });
 
 };
+
+
 catDance();
 
 // window.setInterval(catDance, 50);
