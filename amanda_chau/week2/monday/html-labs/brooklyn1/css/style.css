@@ -1,0 +1,53 @@
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+  /* margin: 20px auto;  */
+}
+
+#wrapper{
+  margin: 40px auto;
+  width: 950px;
+}
+
+h1 {
+  font-size: 40px;
+  color: rgba(101, 101, 101, 0.70);
+  margin-top: 20px;
+}
+
+#news{
+  width: 100%;
+  margin: 10px auto;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover{
+  color: #20222a;
+  text-decoration: none;
+}
+
+#press{
+  width: 100%;
+}
+#press img{
+  border: 4px solid rgba(101, 101, 101, 0.40);
+  padding: 1px 1px 1px 1px;
+  /* box-sizing: border-box; */
+
+}
+
+
+/*
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/

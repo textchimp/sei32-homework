@@ -1,0 +1,140 @@
+html {
+  background: url("https://imgur.com/XJAQ513.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* * {
+  border: 4px solid red;
+} */
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  padding: 5%;
+  background-color: rgb(28, 156, 184);
+  opacity: .8;
+
+}
+
+h1:hover {
+  opacity: 1;
+}
+
+nav {
+  width: 100%;
+  top: 180px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+  border: 4px black solid;
+  background-color: rgba(98, 102, 103, 0.96);
+  color: white;
+  }
+
+li {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 35px;
+
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+a:hover{
+  font-size: 50px;
+}
+
+
+.mainContent {
+  padding: 40px;
+}
+
+#openingPicture {
+  float: left;
+  max-width: 40%;
+  maxheight: 40%;
+  margin-right: 20px;
+}
+
+#oreillyPerl {
+  /* position: absolute; */
+
+}
+
+.perlRules {
+  opacity: 1;
+}
+
+ol {
+  font-size: 8px;
+}
+
+.galleryImages {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+.galleryImages img {
+  width: 20%;
+  height: 20%;
+  margin-left: 35pt;
+}
+
+.larryPics:hover{
+  transform: scale(1.5);
+}
+
+.videoLinks {
+  margin-left: 30%;
+}
+
+.mainArticle {
+  margin: 20px 80px 0px 80px;
+  font-size: 26px;
+  color: white;
+  background-color: rgba(98, 102, 103, 0.96);
+}
+
+h3 {
+  background-color: rgba(98, 102, 103, 0.96);
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  padding: 0 20px;
+  opacity: 0;
+}
+
+h3:hover{
+  opacity: 1;
+}
+.videoLinks {
+   display: inline-block;
+   width: 40%;
+   text-align: center;
+   margin-bottom: 20px;
+   margin-top: 20px;
+
+
+}
+
+.perlDiv{
+  width:80%;
+  height:80%;
+}

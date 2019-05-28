@@ -1,0 +1,86 @@
+body {
+  font: 12px;
+  font-family: "Times New Roman", sans-serif;
+  font-color: #656565
+  align: center;
+  width: 1000px;
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+
+img[src="images/brook-and-lyn-logo.gif"]{
+  padding: 10px 0px;
+}
+
+
+.intro {
+  width: 950px;
+
+}
+
+.publicityLogos {
+  float:left;
+  display: inline-block;
+  /* border-radius: 5px;
+  border: 2px grey solid; */
+  clear: both;
+  width: 1000px;
+  padding: 0 auto;                                              
+}
+
+.publicityLogos img{
+  border: 2px grey solid;
+  border-radius: 5px;
+
+}
+
+/* img[src="images/press-nbcnewyork.gif"]{
+  border: 2px grey solid;
+  border-radius: 5px;
+} */
+
+a {
+  text-decoration: none;
+}
+
+footer{
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a */
