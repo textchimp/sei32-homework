@@ -1,0 +1,47 @@
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+}
+
+a{
+  color: #4593C5;
+}
+
+a:hover {
+  color: #20222a;
+}
+
+#container {
+  display: inline-block;
+  text-align: center;
+}
+
+h1{
+  text-align: left;
+  color: #9C9C9C;
+  padding: 50px, 50px;
+}
+
+h3{
+  text-align: left;
+}
+
+h5{
+  text-align: left;
+  color: #4593C5;
+}
+
+p{
+  text-align: left;
+}
+
+. {
+  border: 30px;
+  color: #CCCCCC;
+}
+
+footer {
+  padding: 40px;
+}
