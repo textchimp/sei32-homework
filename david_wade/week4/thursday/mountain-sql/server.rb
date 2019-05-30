@@ -15,12 +15,7 @@ def db_query( sql )
 end
 
 
-
-
-get "/mountains" do
-  db = SQLite3::Database.new 'database.db'
-  db.result_as_hash = true
-  @result = db.execute 'INSERT * FROM mountains;'
-  db.close
+get "/mountains/:id" do
+  db_query "SELECT * FROM mountains;"
   erb :index
 end
