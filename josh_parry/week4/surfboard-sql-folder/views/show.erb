@@ -1,0 +1,12 @@
+<h2><%= @surfboard['name'] %></h2>
+
+<a href="/surfboards/<%= @surfboard['id'] %>/edit">Edit this surfboard</a>
+|
+<a href="/surfboards/<%= @surfboard['id'] %>/delete">Delete this surfboard</a>
+
+<p><strong>Shaper:</strong><%= @surfboard['shaper'] %></p>
+<p><strong>Description:</strong><%= @surfboard['description'] %></p>
+<p><strong>price:</strong><%= @surfboard['price'] %></p>
+<p><strong>In Stock?:</strong><%= @surfboard['in_stock'] %></p>
+
+<img src="<%= @surfboard['image_url'] %>" alt="">
