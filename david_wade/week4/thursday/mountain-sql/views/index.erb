@@ -1,0 +1,11 @@
+<h2>All Mountains</h2>
+
+<ul>
+  <li>
+  <% @results.each do |mountains| %>
+  <%= mountains['name'] %>
+  <%= mountains['country']%>
+  <%= mountains['height'] %>
+  </li>
+  <% end %>
+</ul>
