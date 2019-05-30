@@ -1,3 +1,7 @@
 .body{
   background-color: rgb(147, 173, 42);
 }
+
+.transformMirro{
+  transform: 'scaleX(-1)';
+}

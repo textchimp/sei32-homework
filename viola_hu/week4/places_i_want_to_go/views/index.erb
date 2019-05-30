@@ -1,0 +1,15 @@
+<h3> Here are some places that I want to travel around in the near future!</h3>
+
+<ul>
+  <% @places.each do |place| %>
+
+  <li>
+    <a href="/places/<%= place['id']%>">
+      <%= place['place'] %>
+    </a>
+    (<%= place['country'] %>)
+  </li>
+
+  <% end %>
+
+</ul>

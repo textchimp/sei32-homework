@@ -1,0 +1,14 @@
+body{
+  font-family: Arial,sans-serif;
+  background-color: rgb(46, 164, 208);
+  color:white;
+
+}
+
+img{
+  max-width: 500px;
+}
+
+a{
+  text-decoration: none;
+}

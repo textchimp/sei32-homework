@@ -1,0 +1,37 @@
+<h2>Update the Info of This Place</h2>
+
+<form action="/places/<%= @oneplace['id'] %>" method="post">
+
+  <label>
+    Place: <input type="text" name="place" value="<%= @oneplace['place'] %>">
+  </label>
+  <br>
+  <br>
+
+  <label>
+    Country: <input type="text" name="country" value="<%= @oneplace['country'] %>">
+  </label>
+  <br>
+  <br>
+
+  <label>
+    Visited or not: <input type="text" name="visited" value="<%= @oneplace['visited'] %>">
+  </label>
+  <br>
+  <br>
+
+  <label>
+    When visited / to visit: <input type="text" name="visit_time" value="<%= @oneplace['visit_time'] %>">
+  </label>
+  <br>
+  <br>
+
+  <label>
+    Image URL: <input type="text" name="image_url" value="<%= @oneplace['image_url'] %>">
+  </label>
+  <br>
+  <br>
+
+  <input type="submit" value="Update">
+
+</form>
