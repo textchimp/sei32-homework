@@ -1,0 +1,12 @@
+<h2>All Businesses</h2>
+
+
+<ul>
+  <% @results.each do |business| %>     <%# no equal sign for loop, result is an array %>
+  <li>
+    <a href="/businesses/<%= business['id'] %>">
+    <%= business['business_name'] %></a>
+    (<%= business['has_website'] %>), <%= business['suburb']%>, <%= business['business_type'] %>
+  </li>
+  <% end %>                           <%# no equal sign for end %>
+</ul>
