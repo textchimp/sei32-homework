@@ -1,0 +1,14 @@
+<h2> <%= @hike['trail'] %></h2>
+
+<a href="/hikes/<%= @hike['id'] %>/edit"> Edit this hike</a>
+|
+<a href="/hikes/<%= @hike['id'] %>/delete"> Delete this hike</a>
+
+<p><strong>Country: </strong> <%= @hike['country'] %></p>
+<p><strong>Description: </strong> <%= @hike['description'] %></p>
+<p><strong>Difficulty: </strong> <%= @hike['difficulty'] %></p>
+<p><strong>Duration: </strong> <%= @hike['duration'] %></p>
+<p><strong>Distance (km): </strong> <%= @hike['distance'] %></p>
+<p><strong>Overnight trip: </strong> <%= @hike['overnight'] %></p>
+
+<img src="<%= @hike['image_url'] %>" alt="">

@@ -61,7 +61,7 @@ end
 
 def off_index(line, off)
   $mta[line].find_index(off)
-end
+end # can delete, do you need this?? no
 
 
 
@@ -74,16 +74,17 @@ def stops_made(line, on, off)
    # if index numbers are getting bigger
    if first_index < last_index
      stops_array = $mta[line][first_index + 1..last_index]
-     puts stops_array             #prints out stops
-     stops_array.length           #counts num of stops
+     puts stops_array  #can return instead of puts             #prints out stops
+     # stops_array.length           #counts num of stops
 
    else
     # if index numbers are getting smaller
      stops_array = $mta[line][last_index..first_index - 1]
      puts stops_array.reverse
-     stops_array.length
+     # stops_array.length
 
    end
+    stops_array.length
 end #end of stopsMade
 
 # stops_made(:n, "Union Square", "28th")
