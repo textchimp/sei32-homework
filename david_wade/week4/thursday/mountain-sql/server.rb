@@ -2,7 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
 
-#function to plug in the thingo to the whats it
+
+
 def db_query( sql )
   db = SQLite3::Database.new 'database.db'
   db.results_as_hash = true
@@ -15,7 +16,10 @@ def db_query( sql )
 end
 
 
-get "/mountains/:id" do
-  db_query "SELECT * FROM mountains;"
+get "/mountains" do
+  db = SQLite3::Database.new 'database.db'
+  db.results_as_hash = true
+  @results = db.execute 'SELECT * FROM mountains;'
+  db.close #close the connection to the db
   erb :index
 end

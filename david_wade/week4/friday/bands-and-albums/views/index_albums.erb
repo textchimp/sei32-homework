@@ -1,0 +1,13 @@
+<h2>Albums Index</h2>
+
+<ul>
+  <% @results.each do |albums| %>
+  <li>
+    <a href="/albums<%= albums['id'] %>">
+    <%= albums['name'] %>
+    </a>
+    <%= albums['name'] %>
+    <%= albums['year'] %>
+  </li>
+  <% end %>
+</ul>
