@@ -35,6 +35,14 @@ get "/bands/:id/edit" do
   erb :edit_bands
 end
 
-post "/bands" do
+post "/bands/:id" do
+  band_to_update = Band.find(params[:id])
 
+  band_to_update.update(
+    name:      params[:name],
+    genre:     params[:genre],
+    active:    params[:active],
+    image_url: params[:image_url],
+  )
+  redirect "/bands/#{params[:id]}"
 end
