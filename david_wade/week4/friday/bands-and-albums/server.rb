@@ -24,6 +24,13 @@ get "/bands" do
   erb :index_bands
 end
 
-get "bands/:id" do
-  owner = Band.find params[:id]
+get "/bands/:id" do
+  @bands = Band.find params[:id]
+  erb :show_bands
+end
+
+#U - Update
+get "/bands/:id/edit" do
+  @bands = Band.find params[:id]
+  erb :edit
 end
