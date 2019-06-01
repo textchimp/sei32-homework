@@ -16,6 +16,11 @@ after do
 end
 
 class Band < ActiveRecord::Base
+  has_many :albums
+end
+
+class Album < ActiveRecord::Base
+  belongs_to :bands
 end
 
 #C Create
