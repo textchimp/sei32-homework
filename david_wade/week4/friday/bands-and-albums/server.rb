@@ -18,6 +18,23 @@ end
 class Band < ActiveRecord::Base
 end
 
+#C Create
+get "/bands/new" do
+  erb :new_bands
+end
+
+post "/bands" do
+
+  Band.create(
+    name:      params[:name],
+    genre:     params[:genre],
+    albums:    params[:albums],
+    active:    params[:active],
+    image_url: params[:image_url],
+  )
+  redirect "/bands"
+end
+
 #R - Read
 get "/bands" do
   @results = Band.all
@@ -41,8 +58,16 @@ post "/bands/:id" do
   band_to_update.update(
     name:      params[:name],
     genre:     params[:genre],
+    albums:    params[:albums],
     active:    params[:active],
     image_url: params[:image_url],
   )
   redirect "/bands/#{params[:id]}"
+end
+
+#D - Delete
+get "/bands/:id/delete" do
+  bands_to_delete = Band.find params[:id]
+  bands_to_delete.destroy
+  redirect "/bands"
 end

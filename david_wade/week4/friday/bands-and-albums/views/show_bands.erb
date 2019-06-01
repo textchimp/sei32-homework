@@ -1,10 +1,13 @@
-<h2><%= @bands['name'] %></h2>
-
 <a href="/bands/<%= @bands['id'] %>/edit">Edit</a>
+
+<a href="/bands/<%= @bands['id'] %>/delete">Delete</a>
+
+<h1><%= @bands['name'] %></h1>
 
 <p><strong>Genre: </strong><%= @bands['genre'] %></p>
 <p><strong>Number of Albums: </strong><%= @bands['albums'] %></p>
 <p><strong>Active: </strong><%= @bands['active'] %></p>
 <img src="<%= @bands['image_url'] %>">
+
 
 <!-- genre, albums, active -->
