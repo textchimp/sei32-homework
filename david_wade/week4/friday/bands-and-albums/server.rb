@@ -76,3 +76,14 @@ get "/bands/:id/delete" do
   bands_to_delete.destroy
   redirect "/bands"
 end
+
+#R - Read
+get "/albums" do
+  @results = Album.all
+  erb :index_albums
+end
+
+get "/albums/:id" do
+  @albums = Album.find params[:id]
+  erb :show_albums
+end
