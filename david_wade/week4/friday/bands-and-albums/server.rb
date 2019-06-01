@@ -32,5 +32,9 @@ end
 #U - Update
 get "/bands/:id/edit" do
   @bands = Band.find params[:id]
-  erb :edit
+  erb :edit_bands
+end
+
+post "/bands" do
+
 end

@@ -1,0 +1,28 @@
+<h2>Edit Band</h2>
+
+<form action="/bands/<%= @bands[:id] %>" method="post">
+
+  <label>
+    Name: <input type="text" name="name" value="<%= @bands['name'] %>">
+  </label>
+    <br>
+  <label>
+    Genre: <input type="text" name="genre" value="<%= @bands['genre'] %>">
+  </label>
+    <br>
+  <label>
+    Active: <input type="text" name="active" value="<%= @bands['active'] %>">
+  </label>
+    <br>
+  <label>
+    Image: <input type="text" name="image_url" value="<%= @bands['image_url'] %>">
+  </label>
+    <br>
+    <label>
+      Create Band: <input type="button" value="Update Animal">
+    </label>
+    <br>
+  
+
+
+</form>
