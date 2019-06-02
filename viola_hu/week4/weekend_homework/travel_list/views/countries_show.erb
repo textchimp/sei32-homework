@@ -1,0 +1,12 @@
+<h2><%= @country.name %></h2>
+
+<h3>Check out the below places in <%= @country.name %>!</h3>
+
+<ul>
+  <% @country.places.each do |place| %>
+  <li>
+    <a href="/places/<%= place.id %>"> <%= place.name %>
+    </a>
+  </li>
+  <% end %>
+</ul>

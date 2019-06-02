@@ -1,0 +1,17 @@
+<h2 id="place_name">
+  <%= @place.name %>
+</h2>
+
+<a class="edit_delete" href="/places/<%= @place.id %>/edit"> Edit This Place </a>
+<a class="edit_delete" href="/places/<%= @place.id %>/delete"> Delete This Place </a>
+
+<p><strong>Country: </strong> <%= @place.country.name %> </p>
+<p><strong>Continent: </strong> <%= @place.continent.name %> </p>
+<p><strong>Visited or not: </strong> <%= @place.visited %> </p>
+<p><strong>When to visit: </strong> <%= @place.visit_time %> </p>
+
+<hr>
+
+<img src="<%= @place.image_url %>" alt="place_picture">
+
+<p> <%= @place.description%> </p>

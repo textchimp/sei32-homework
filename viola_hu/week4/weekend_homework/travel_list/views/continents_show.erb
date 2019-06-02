@@ -1,0 +1,13 @@
+<h2> <%= @continent.name %>!!!</h2>
+
+<h3> You've got below countries on your list!</h3>
+
+<ul>
+  <% @continent.countries.each do |country| %>
+  <li>
+    <a href="/countries/<%= country.id %>"> <%= country.name %> </a>
+    <% end %>
+  </li>
+</ul>
+
+<a href="/countries/new"> Add a new contry to your list?!</a>
