@@ -1,0 +1,36 @@
+<h2>Edit this art work</h2>
+
+<form action="/artists/<%= @artist.id %>" method="post">
+
+<!-- need to add values  -->
+
+  <label>
+    Name of artist:
+    <input type="text" name="name" value="<%= @artist.name %>">
+  </label> <br>
+
+  <label>
+    Birthdate:
+    <input type="text" name="birthdate" value="<%= @artist.birthdate %>">
+  </label> <br>
+
+  <label>
+    Living:
+    <input type="text" name="alive" value="<%= @artist.alive %>">
+  </label> <br>
+
+  <label>
+    Nationality:
+    <input type="text" name="nationality" value="<%= @artist.nationality %>">
+  </label> <br>
+
+  <label>
+    Movement:
+    <input type="text" name="movement" value="<%= @artist.movement %>">
+  </label> <br>
+
+
+
+<input type="submit" value="Update">
+
+</form>

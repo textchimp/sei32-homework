@@ -1,0 +1,27 @@
+<h2><strong><%= @artist['name'] %></strong></h2>
+
+<p><strong>Born:</strong> <%= @artist['birthdate'] %></p>
+
+<!-- how did this convert to TRUE?!? -->
+<p><strong>Living: </strong> <%= @artist['alive'] %></p>
+
+<!-- #can use dot notation  -->
+<p><strong>Nationality: </strong> <%= @artist['nationality'] %></p>
+
+<p><strong>Movement: </strong> <%= @artist['movement'] %></p>
+
+<p><strong>Selected works: </strong></p>
+<ul class="imageList">
+<% @results.each do |art| %>
+<li>
+<img src="<%= art['image_url'] %>" alt="">
+</li>
+<% end %>
+</ul>
+
+
+
+
+<a href="/artists/<%= @artist['id'] %>/edit"> Edit </a>
+|
+<a href="/artists/<%= @artist['id'] %>/delete"> Delete </a>

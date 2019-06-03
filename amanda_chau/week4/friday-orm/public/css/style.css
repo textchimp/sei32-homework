@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.imageList li{
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  padding: 15px 5px;
+}
+.imageList a{
+  display: block;
+}
+.imageList img{
+  max-width: 300px;
+}

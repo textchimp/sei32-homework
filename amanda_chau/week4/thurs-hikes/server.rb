@@ -52,6 +52,7 @@ end
 
 # 1. Index of all hikes
 
+# this is a route 
 get "/hikes" do
   @results = db_query 'SELECT * FROM hikes;'
 

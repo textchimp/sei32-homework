@@ -1,0 +1,32 @@
+<h2>Edit this art work</h2>
+
+<form action="/arts/<%= @art['id'] %>" method="post">
+
+<label>
+  Title of art work:
+  <input type="text" name="name" value="<%= @art['name']  %>">
+</label> <br>
+
+<label>
+  Artist id:
+  <input type="text" name="artist_id" value="<%= @art['artist_id'] %>">
+</label> <br>
+
+<label>
+  Year:
+  <input type="text" name="year" value="<%= @art['year'] %>">
+</label> <br>
+
+<label>
+  Medium:
+  <input type="text" name="medium" value="<%= @art['medium']%>" >
+</label> <br>
+
+<label>
+  Image URL:
+  <input type="text" name="image_url" value="<%= @art['image_url'] %>">
+</label> <br>
+
+<input type="submit" value="Update">
+
+</form>
