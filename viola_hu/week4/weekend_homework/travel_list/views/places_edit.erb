@@ -18,9 +18,12 @@
       <option value="1">Europe</option>
       <option value="5">North America</option>
       <option value="7">Oceania</option>
-      <option value="2">South America</option>
+      <option value="2" selected="true">South America</option>
     </select>
   </label>
+
+  <!-- 1) loop to spit all the option instead of hard code, Continent.all.each, prints each object's name,
+  2) use attribute : selected = 'true', loop to check which is the current value, if found it add this attribute in order to show the current value instead of showing the default first option! -->
 
   <label>
     Visted or not:

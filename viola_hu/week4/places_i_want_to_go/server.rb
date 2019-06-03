@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
+require 'pry'
 
 def db_query(sql)
   db= SQLite3::Database.new 'database.db'
@@ -21,6 +22,8 @@ end
 
 #2, new form submits here
 post "/places" do
+  # p params #tested, working!
+
   sql = "INSERT INTO places(place, country, visited, visit_time, image_url)
     VALUES(
       '#{params[:place]}',
@@ -44,6 +47,8 @@ end
 get "/places" do
   @places = db_query 'SELECT * FROM places;' #big array with each place's hash
 
+  # binding.pry
+
   erb :index
 end
 
@@ -66,6 +71,8 @@ end
 #1, pre-populated form for a specific place by ## ID
 
 get "/places/:id/edit" do
+
+
   result = db_query "SELECT * FROM places WHERE id = #{params[:id]};" #return a big array including one hash whose id matches the id.
 
   @oneplace = result.first # one hash of one place
@@ -76,6 +83,7 @@ end
 # submit the updated form
 
 post "/places/:id" do
+  p params #tested, working!
 
   sql = "UPDATE places SET
     place        = '#{params[:place]}',

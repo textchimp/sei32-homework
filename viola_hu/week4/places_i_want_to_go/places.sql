@@ -32,3 +32,5 @@ INSERT INTO places (place, country, visited, visit_time, image_url)
   VALUES(
     'Antarctica', 'n/a', 0, 20201201, 'https://www.azamaraclubcruises.com/sites/default/files/heros/antarctica-facts-hero-image.jpg'
   );
+
+SELECT * FROM places;

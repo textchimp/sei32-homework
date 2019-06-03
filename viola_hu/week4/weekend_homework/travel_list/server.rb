@@ -221,5 +221,8 @@ get "/places/:id/delete" do
 
   to_be_deleted.destroy
 
+
+  # Place.destroy params[:id] short way! one step instead of 2 steps
+
   redirect "/places"
 end
