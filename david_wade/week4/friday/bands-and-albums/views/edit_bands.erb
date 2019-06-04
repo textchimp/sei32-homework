@@ -1,9 +1,13 @@
 <h2>Edit Band</h2>
 
-<form action="/bands/<%= @bands[:id] %>" method="post">
+<form action="/bands/<%= @bands['id'] %>" method="post">
 
   <label>
     Name: <input type="text" name="name" value="<%= @bands['name'] %>">
+  </label>
+    <br>
+  <label>
+    Nationality: <input type="text" name="nationality" value="<%= @bands['nationality'] %>">
   </label>
     <br>
   <label>
@@ -11,7 +15,7 @@
   </label>
     <br>
     <label>
-      Albums: <input type="text" name="albums" value="<%= @bands['albums'] %>">
+      Record Sales: <input type="text" name="record_sales" value="<%= @bands['record_sales'] %>">
     </label>
     <br>
   <label>

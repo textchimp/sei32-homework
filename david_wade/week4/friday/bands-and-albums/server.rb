@@ -20,7 +20,7 @@ class Band < ActiveRecord::Base
 end
 
 class Album < ActiveRecord::Base
-  belongs_to :bands
+  belongs_to :band
 end
 
 #C Create
@@ -31,11 +31,12 @@ end
 post "/bands" do
 
   Band.create(
-    name:      params[:name],
-    genre:     params[:genre],
-    albums:    params[:albums],
-    active:    params[:active],
-    image_url: params[:image_url],
+    name:           params[:name],
+    nationality:    params[:nationality],
+    genre:          params[:genre],
+    record_sales:   params[:record_sales],
+    active:         params[:active],
+    image_url:      params[:image_url],
   )
   redirect "/bands"
 end
@@ -61,11 +62,12 @@ post "/bands/:id" do
   band_to_update = Band.find(params[:id])
 
   band_to_update.update(
-    name:      params[:name],
-    genre:     params[:genre],
-    albums:    params[:albums],
-    active:    params[:active],
-    image_url: params[:image_url],
+    name:           params[:name],
+    nationality:    params[:nationality],
+    genre:          params[:genre],
+    record_sales:   params[:record_sales],
+    active:         params[:active],
+    image_url:      params[:image_url],
   )
   redirect "/bands/#{params[:id]}"
 end
@@ -78,12 +80,7 @@ get "/bands/:id/delete" do
 end
 
 #R - Read
-get "/albums" do
-  @results = Album.all
-  erb :index_albums
-end
-
-get "/albums/:id" do
-  @albums = Album.find params[:id]
+get "/albums/:id/" do
+  @album = Album.find params[:id]
   erb :show_albums
 end
