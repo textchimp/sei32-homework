@@ -1,0 +1,50 @@
+<h2>Update the place information!</h2>
+
+<form action="/places/<%= @place.id %>" method="post">
+  <label>
+    Name: <input type="text" name="name" value="<%= @place.name %>">
+  </label>
+
+  <label>
+    Country: <input type="text" name="country_id" value="<%= @place.country.name %>">
+  </label>
+
+  <label>
+    Continent:
+    <select name="continent_id">
+      <option value="6">Africa</option>
+      <option value="4">Antarctica</option>
+      <option value="3">Asia</option>
+      <option value="1">Europe</option>
+      <option value="5">North America</option>
+      <option value="7">Oceania</option>
+      <option value="2" selected="true">South America</option>
+    </select>
+  </label>
+
+  <!-- 1) loop to spit all the option instead of hard code, Continent.all.each, prints each object's name,
+  2) use attribute : selected = 'true', loop to check which is the current value, if found it add this attribute in order to show the current value instead of showing the default first option! -->
+
+  <label>
+    Visted or not:
+    <select name="visited">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label>
+
+  <label>
+    When to visit: <input type="text" name="visit_time" value="<%= @place.visit_time %>">
+  </label>
+
+  <label>
+    Image URL: <input type="text" name="image_url" value="<%= @place.image_url %>">
+  </label>
+
+  <label>
+    Description: <input type="text" name="description" value="<%= @place.description %>">
+  </label>
+
+  <input type="submit" value="Update">
+
+</form>

@@ -1,0 +1,14 @@
+<h2>Let's pick up one continent!</h2>
+
+<ul>
+  <% @continents.each do |continent| %>
+  <li>
+    <a href="/continents/<%= continent.id %>"><%= continent.name %></a>
+  </li>
+  <% end %>
+</ul>
+
+<hr>
+<h2>Alternatively!</h2>
+
+<p>Go have a quick look at <a href="/places">places</a> on the list!</p>

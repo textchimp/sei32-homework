@@ -1,0 +1,15 @@
+
+<h2>All Surfboards</h2>
+
+<ul>
+  <% @results.each do |surfboard| %>
+    <li>
+      <a href="/surfboards/<%= surfboard['id'] %>">
+      <%= surfboard['name'] %>
+      </a>
+      (<%= surfboard['shaper'] %>)
+      <%= surfboard['price'] %>
+
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,40 @@
+<h2>Edit hike</h2>
+
+<form action="/hikes/<%= @hike['id'] %>" method="post">
+
+  <label>
+    Trail: <input type="text" name="trail" value="<%= @hike['trail'] %>">
+  </label> <br>
+
+  <label>
+    Country: <input type="text" name="country" value="<%= @hike['country'] %>">
+  </label> <br>
+
+  <label>
+    Description: <input type="text" name="description" value="<%= @hike['description'] %>">
+  </label> <br>
+
+  <label>
+    Difficulty: <input type="text" name="difficulty" value="<%= @hike['difficulty'] %>">
+  </label> <br>
+
+  <label>
+    Duration: <input type="text" name="duration" value="<%= @hike['duration'] %>">
+  </label> <br>
+
+  <label>
+    Distance: <input type="text" name="distance" value="<%= @hike['distance'] %>">
+  </label> <br>
+
+  <label>
+    Overnight trip: <input type="text" name="overnight" value="<%= @hike['overnight'] %>">
+  </label> <br>
+
+  <label>
+    Image URL: <input type="text" name="image_url" value="<%= @hike['image_url'] %>">
+  </label> <br>
+
+  <input type="submit" value="Edit hike">
+
+
+</form>

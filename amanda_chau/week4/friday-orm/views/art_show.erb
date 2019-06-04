@@ -1,0 +1,13 @@
+<h2><strong><%= @art['name'] %></strong></h2>
+<p><%= @art['year'] %></p>
+
+<!-- how does this work? -->
+<p><strong> <%= @art.artist.name %> </strong></p>
+
+<p><em><%= @art['medium'] %></em></p>
+
+<img src="<%= @art['image_url'] %>" alt="">
+
+<a href="/arts/<%= @art['id'] %>/edit"> Edit </a>
+|
+<a href="/arts/<%= @art['id'] %>/delete"> Delete </a>

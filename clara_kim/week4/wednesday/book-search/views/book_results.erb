@@ -1,0 +1,16 @@
+<h2>Search Results:</h2>
+
+<ul>
+<% @results.each do |book| %>
+
+ <li>
+  <strong><%= book['volumeInfo']['title'] %></strong>
+  <p><%= book['volumeInfo']['description'] %></p>
+
+  <%# if else statement for no small thumbnail %>
+  <% if  book['volumeInfo'].key? 'imageLinks' %>
+  <img src="<%= book['volumeInfo']['imageLinks']['smallThumbnail']" %> alt="">
+  <% end %>
+ </li>
+
+<%# no <%= can't do equal otherwise it will print off the entire block %>
