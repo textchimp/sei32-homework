@@ -6,7 +6,7 @@ class RpsController < ApplicationController
   def play
     @app_throw = %w{rock paper scissors}.sample
     @user_throw = params[:throw]
-    
+
     if @user_throw == "rock" && @app_throw == "scissors"
       @message = "Congratulations! You won!!!"
     elsif @user_throw == "scissors" && @app_throw == "paper"
@@ -20,3 +20,6 @@ class RpsController < ApplicationController
   end
 
 end
+
+
+# can use maths method, 0,1,2 
