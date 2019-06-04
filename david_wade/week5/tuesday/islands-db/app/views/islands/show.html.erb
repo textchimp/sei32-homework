@@ -1,0 +1,31 @@
+<h2><%= @island.name %></h2>
+
+<a href="<%= island_edit_path(@island.id) %>">Edit</a>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @island.name %>
+</p>
+<p>
+  <strong>Demonym:</strong>
+  <%= @island.demonym %>
+</p>
+<p>
+  <strong>Capital:</strong>
+  <%= @island.capital %>
+</p>
+<p>
+  <strong>Currency:</strong>
+  <%= @island.currency %>
+</p>
+<p>
+  <strong>Area:</strong>
+  <%= @island.area %>
+  Square Kilometres
+</p>
+
+
+<% if @island.image.present? %>
+<%=  image_tag @island.image, alt: @island.name, class: 'island-show'%>
+<% end %>
