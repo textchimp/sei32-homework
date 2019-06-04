@@ -1,0 +1,9 @@
+<h2>Search results: </h2>
+
+<ul>
+<% @results.each do |book| %>
+  <li>
+  <%=book['volumeInfo']['title'] %>
+  </li>
+<% end %>
+</ul>>
