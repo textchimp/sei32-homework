@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  headquarters: MyText
+  traded_as: MyText
+  founded: 2019-06-05
+  revenue: 1
+  image: MyText
+
+two:
+  name: MyText
+  headquarters: MyText
+  traded_as: MyText
+  founded: 2019-06-05
+  revenue: 1
+  image: MyText

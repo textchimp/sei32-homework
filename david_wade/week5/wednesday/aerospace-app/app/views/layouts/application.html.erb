@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AerospaceApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>Passenger Jets of the World</h1>
+
+    <nav>
+
+      <%= link_to 'Aircraft Companies', companies_path %>
+
+    </nav>
+    <hr>
+    <%= yield %>
+    <hr>
+    <footer>
+      &copy International Infomation Association
+    </footer>
+  </body>
+
+</html>

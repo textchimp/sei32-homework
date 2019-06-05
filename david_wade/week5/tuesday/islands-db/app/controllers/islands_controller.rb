@@ -1,5 +1,7 @@
 class IslandsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token, raise: false
+
 
 
 
@@ -28,10 +30,10 @@ def update
     capital: params[:capital],
     currency: params[:currency],
     area: params[:area],
-    image: params[:image],
+    image: params[:image]
   )
 
-  redirect_to( island_path(island.id) )
+  redirect_to ( island_path(island.id) )
 end
 
 

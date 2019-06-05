@@ -1,0 +1,8 @@
+<h1><%=  @company.name %></h1>
+
+<p><strong>Headquarters:</strong><%= @company.headquarters %></p>
+<p><strong>Trading As:</strong><%= @company.traded_as %></p>
+<p><strong>Founded:</strong><%= @company.founded %></p>
+<p><strong>Revenue:</strong><%= @company.revenue %></p>
+
+<%= image_tag @company.image, alt: @company.image, class: 'company-picture'  %>
