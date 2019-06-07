@@ -65,4 +65,8 @@ end
 #
 # puts "#{value1 + value2}"
 
-# line 36 create a variable 'output = case operation', can omit each puts, then at last puts output which contains a message/calculation result!
+#**** as ruby doesn't have global scope this concept, variables inside a function cannot access same-name variables outside it. as when you type value2 = gets.chomp.to_f, it creates a new variable immediately, and it has nothing to do with the value2 outside the function.
+# variables can only be accessed at the same level, no scope concept!
+# thus, when want to do puts "#{value1 + value2}", value2 is always = 0 as defined earlier
+
+# line 36 create a variable 'output = case operation', can omit each puts, then at last puts output which stores a return value from the whole case statement block - message/calculation result!

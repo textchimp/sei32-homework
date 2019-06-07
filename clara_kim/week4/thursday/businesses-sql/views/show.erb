@@ -1,0 +1,27 @@
+
+<h2><%= @business['business_name'] %></h2>
+
+
+<a href="/businesss/<%= @business['id'] %>/edit">Edit this Business</a>
+|
+<a href="/businesss/<%= @business['id'] %>/delete">Delete this Business</a>
+
+
+<!-- <a href="/businesss/ID/edit">Edit</a> -->
+
+<p><strong>Business Name:</strong> <%= @business['business_name']  %></p>
+<p><strong>Has Website:</strong> <%= @business['has_website']  %></p>
+<p><strong>Suburb:</strong> <%= @business['suburb'] %></p>
+<p><strong>Postcode:</strong> <%= @business['postcode'] %></p>
+<p><strong>Street Address:</strong> <%= @business['street_address'] %></p>
+<p><strong>Business Type:</strong> <%= @business['business_type'] %></p>
+<p><strong>Owner:</strong> <%= @business['owner'] %></p>
+<p><strong>Landline Number:</strong> <%= @business['landline_number'] %></p>
+<p><strong>Mobile Number:</strong> <%= @business['mobile_number'] %></p>
+<p><strong>Email:</strong> <%= @business['email'] %></p>
+<p><strong>Storefront Image URL:</strong> <%= @business['storefront_image_url'] %></p>
+<p><strong>Date Added:</strong> <%= @business['date_added'] %></p>
+
+
+
+<img src="<%= @business['storefront_image_url'] %>" alt="Business Image Here">

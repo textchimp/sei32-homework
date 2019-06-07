@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesOnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <h1>Welcome to Games on Rails</h1>
+    <a href="/games">Games Index</a>
+    <hr>
+    <%= yield %>
+    <hr>
+    <p>&copy; Viola's Games on Rails 2019</p>
+  </body>
+</html>
