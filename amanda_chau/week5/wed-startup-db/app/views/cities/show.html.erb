@@ -1,0 +1,11 @@
+<h2><%= @city.name %></h2>
+
+<%= link_to 'Edit', city_edit_path(@city.id)  %>
+|
+<%= link_to 'Delete', city_delete_path(@city.id), method: "delete"  %>
+
+<p><strong>Population</strong>: <%= @city.population %></p>
+<p><strong>Number of startups</strong>: <%= @city.num_startups %></p>
+<p><strong>Average Valuation</strong>: <%= @city.avg_val %>M</p>
+
+<%= image_tag @city.image, alt: '@city.name', class: "show-city" %>

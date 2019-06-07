@@ -1,0 +1,41 @@
+<h2>Edit <%= @animal.name %></h2>
+
+<form action="<%= animal_path(@animal.id) %>" method="post">
+<label>
+  Name:
+  <input type="text" name="name" value="<%= @animal.name %>">
+</label><br>
+<label>
+  Image:
+  <input type="text" name="image" value="<%= @animal.image %>">
+</label><br>
+<label>
+  Location:
+  <input type="text" name="location" value="<%= @animal.location %>">
+</label><br>
+<label>
+  Diet:
+  <input type="text" name="diet" value="<%= @animal.diet %>">
+</label><br>
+<label>
+  Mass (min):
+  <input type="text" name="min_mass" value="<%= @animal.min_mass %>">
+</label><br>
+<label>
+  Mass (min):
+  <input type="text" name="max_mass" value="<%= @animal.max_mass %>">
+</label><br>
+<label>
+  Lifespan:
+  <input type="text" name="lifespan" value="<%= @animal.lifespan %>">
+</label><br>
+<label>
+  Is this animal a marsupial:
+  <input type="text" name="marsupial" value="<%= @animal.marsupial %>"">
+</label><br>
+
+
+<input type="submit" name="Edit">
+
+
+</form>
