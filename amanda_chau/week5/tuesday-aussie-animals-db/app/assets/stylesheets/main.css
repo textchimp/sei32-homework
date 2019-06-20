@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(57, 57, 59);
+  color: white;
+}
+
+a {
+  color: orange;
+}
+.show {
+  max-width: 400px;
+}

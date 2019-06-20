@@ -1,0 +1,9 @@
+<h2>All Aussie Animals</h2>
+
+<ul>
+<% @animals.each do |animal|  %>
+  <li> <a href="<%= animal_path(animal['id']) %>"><%= animal['name'] %></a>
+  </li>
+
+<% end %>
+</ul>

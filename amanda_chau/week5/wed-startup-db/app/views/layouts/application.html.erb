@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WedStartupDb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <h1>Australian Startups</h1>
+    <nav>
+      <%= link_to 'All cities', cities_path %>
+      |
+      <%= link_to 'Add new city', cities_new_path %>
+    </nav>
+    <hr>
+
+    <body>
+      <%= yield %>
+    </body>
+    <hr>
+    <footer>
+      &copy; Cherub List 2019
+    </footer>
+</html>

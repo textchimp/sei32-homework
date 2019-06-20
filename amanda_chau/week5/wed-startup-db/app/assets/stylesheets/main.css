@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(235, 235, 235)
+  color: rgb(49, 51, 49)
+  family-font: Tahoma, san-serif;
+}
+
+a {
+  color: rgb(14, 139, 152);
+}
+img.show-city {
+  max-width: 400px;
+}
+
+fieldset {
+  border: 0;
+}
