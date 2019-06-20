@@ -1,0 +1,15 @@
+<h2><%= @animal.name %></h2>
+
+<a href="<%= animals_edit_path(@animal.id) %>">Edit</a>
+|
+<a href="<%= animals_delete_path(@animal.id) %>">Delete</a>
+
+<p><strong>Location: </strong><%= @animal.location %></p>
+<p><strong>Diet: </strong><%= @animal.diet %></p>
+<p><strong>Mass: </strong><%= @animal.min_mass %> - <%= @animal.max_mass %> kg</p>
+<p><strong>Lifespan: </strong><%= @animal.lifespan %></p>
+<p><strong>Marsupial: </strong><%= @animal.marsupial %></p>
+
+<% if @animal.image.present?  %>
+  <%= image_tag @animal.image, alt: @animal.name, class: 'show' %>
+<% end %>

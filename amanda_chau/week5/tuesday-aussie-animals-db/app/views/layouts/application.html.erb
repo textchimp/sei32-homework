@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TuesdayAussieAnimalsDb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+   <h1>Learn About Aussie Animals </h1>
+   <nav>
+     <a href="<%= animals_path %>">Index</a>
+     |
+     <a href="<%= animals_new_path %>">Add new animal</a>
+   </nav>
+
+   <hr>
+    <body>
+      <%= yield %>
+    </body>
+    <hr>
+    <footer>
+      &copy; 2019 No More Zoos Co.
+    </footer>
+</html>
