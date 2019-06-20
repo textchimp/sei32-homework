@@ -1,0 +1,12 @@
+<h2>All Hikes</h2>
+
+<ul>
+
+  <% @results.each do |hike|  %>
+    <li>
+      <a href="/hikes/<%= hike['id'] %>">
+      <%= hike['trail'] %>
+      </a>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  population: 1
+  num_startups: 1
+  avg_val: 1.5
+  image: MyText
+
+two:
+  name: MyText
+  population: 1
+  num_startups: 1
+  avg_val: 1.5
+  image: MyText

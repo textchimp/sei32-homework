@@ -1,0 +1,26 @@
+<h2>Edit Surfboard</h2>
+
+<form  action="/surfboards/<%= @surfboard['id'] %>" method="post">
+
+  <label>
+    Name: <input type="text" name="name" value="<%= @surfboard['name'] %>">
+  </label><br>
+  <label>
+    Shaper: <input type="text" name="shaper" value="<%= @surfboard['shaper'] %>">
+  </label><br>
+  <label>
+    description: <input type="text" name="description" value="<%= @surfboard['description'] %>">
+  </label><br>
+  <label>
+    Price: <input type="text" name="price" value="<%= @surfboard['price'] %>">
+  </label><br>
+  <label>
+    in_stock: <input type="text" name="in_stock" value="<%= @surfboard['in_stock'] %>">
+  </label><br>
+  <label>
+    Image URL: <input type="text" name="image_url" value="<%= @surfboard['image_url'] %>">
+  </label><br>
+
+  <input type="submit" value="Create Surfboard">
+
+</form>

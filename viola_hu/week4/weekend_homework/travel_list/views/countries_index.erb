@@ -1,0 +1,15 @@
+<h2> Countries List </h2>
+
+<p> Here's the list of all countries that you want to go so far! <br>
+  Click each country to find out interesting places to go!!!</p>
+
+<ul>
+
+  <% @countries.each do |country| %>
+  <li>
+    <a href="/countries/<%= country.id %>">
+      <%= country.name %> (<%= country.continent.name %>)
+    </a>
+  </li>
+  <% end %>
+</ul>

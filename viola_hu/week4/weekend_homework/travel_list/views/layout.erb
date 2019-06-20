@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Viola's Travel List</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1 id="layout_h1">Viola's Travel List</h1>
+
+  <nav>
+    <a class="layout" href="/continents"> Continents</a>
+
+    <a class="layout" href="/countries"> Countries</a>
+
+    <a class="layout" href="/places"> Places</a>
+
+    <a class="layout" href="/places/new"> Add A New Place </a>
+  </nav>
+
+  <hr>
+  <%= yield %>
+  <!-- add the specific template output here, i.e. from index.erb or similar -->
+  <hr>
+
+  <footer>
+    &copy; Viola's Travel Plan 2019
+  </footer>
+</body>
+</html>

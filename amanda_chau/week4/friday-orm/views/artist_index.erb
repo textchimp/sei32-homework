@@ -1,0 +1,16 @@
+<h2>All art works</h2>
+
+<a href="/artists/new">Add artist</a>
+
+<ul>
+  <% @results.each do |artist|  %>
+  <li>
+    <a href="/artists/<%= artist['id'] %>">
+    <%= artist['name'] %>
+    </a>
+
+  </li>
+  <% end %>
+
+
+</ul>

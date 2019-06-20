@@ -1,0 +1,34 @@
+
+<%= form_for @city do |f| %>
+
+<!-- why do we need a for loop  -->
+
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :population %>
+  <%= f.text_field :population %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :num_startups, 'Number of Startups' %>
+  <%= f.text_field :num_startups %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :avg_val, 'Average Valuation' %>
+  <%= f.text_field :avg_val %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :image, 'Image URL' %>
+  <%= f.text_field :image %>
+</fieldset>
+
+<%= f.submit %>
+
+
+<% end  %>

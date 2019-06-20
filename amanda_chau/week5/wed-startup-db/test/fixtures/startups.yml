@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  founder: MyText
+  categories: MyText
+  logo: MyText
+  hiring_devs: false
+
+two:
+  name: MyText
+  founder: MyText
+  categories: MyText
+  logo: MyText
+  hiring_devs: false
