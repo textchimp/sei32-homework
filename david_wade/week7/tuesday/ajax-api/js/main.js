@@ -12,8 +12,7 @@ $(document).ready(function(){
   $.getJSON( url )
   .done(function( response ){
     //gives back an object called 'data' within is a key called
-    //'url' which i suspect will give me an image
-    //keep above in mind for loop below
+    //'url' which gives me an image
     console.log( response );
     console.log('response.data: ', response.data);
     console.log('response.data[0]: ', response.data[0]);
@@ -26,7 +25,7 @@ $(document).ready(function(){
       const giphy = response.data[i];
       // const output = `<img src=`
     }
-    $('#results').append(response.data[0].images.original.url)
+    // $('#results').append(response.data[0].images.original.url)
 
     console.log(response.data);
 
