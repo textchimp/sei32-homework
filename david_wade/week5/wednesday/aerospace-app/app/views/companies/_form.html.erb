@@ -1,0 +1,30 @@
+<%= form_for @company do |f| %>
+
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</fieldset>
+<fieldset>
+  <%= f.label :headquarters %>
+  <%= f.text_field :headquarters %>
+</fieldset>
+<fieldset>
+  <%= f.label :trading_as %>
+  <%= f.text_field :traded_as %>
+</fieldset>
+<fieldset>
+  <%= f.label :founded, 'Year'%>
+  <%= f.text_field :founded %>
+</fieldset>
+<fieldset>
+  <%= f.label :revenue %>
+  <%= f.text_field :revenue %>
+</fieldset>
+<fieldset>
+  <%= f.label :image, 'Image URL' %>
+  <%= f.text_field :image %>
+</fieldset>
+
+<%= f.submit %>
+
+<% end %>

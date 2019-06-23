@@ -1,0 +1,34 @@
+<h2>Edit Band</h2>
+
+<form action="/bands/<%= @bands['id'] %>" method="post">
+
+  <label>
+    Name: <input type="text" name="name" value="<%= @bands['name'] %>">
+  </label>
+    <br>
+  <label>
+    Nationality: <input type="text" name="nationality" value="<%= @bands['nationality'] %>">
+  </label>
+    <br>
+  <label>
+    Genre: <input type="text" name="genre" value="<%= @bands['genre'] %>">
+  </label>
+    <br>
+    <label>
+      Record Sales: <input type="text" name="record_sales" value="<%= @bands['record_sales'] %>">
+    </label>
+    <br>
+  <label>
+    Active: <input type="text" name="active" value="<%= @bands['active'] %>">
+  </label>
+    <br>
+  <label>
+    Image: <input type="text" name="image_url" value="<%= @bands['image_url'] %>">
+  </label>
+    <br>
+    <label>
+      Update: <input type="submit" value="Submit">
+    </label>
+    <br>
+
+  </form>

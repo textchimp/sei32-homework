@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(99, 166, 221);
+  color: white;
+  font-family: helvetica, serif;
+}
+
+fieldset {
+  border: 0;
+}
+
+img.company-picture {
+  max-height: 400px;
+}
