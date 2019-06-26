@@ -1,22 +1,24 @@
-# Warmup: AJAX Proxy in Rails
+# README
 
-Doesn't it suck how most of the web pages you might want to load as data via AJAX return that damned _"No 'Access-Control-Allow-Origin' header is present on the requested resource"_ Cross-Origin-Resource-Sharing exception? They just won't let you load their precious pages via Javascript! (Or they don't care and haven't thought to enable it, and it's deny-by-default.)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-A proxy is a server that sits between your computer and some other computer on the network, and interacts with the remote computer on your behalf, for some reason - perhaps to cache files for quicker retrieval, or to provide anonymity, or to fake your location, etc.
+Things you may want to cover:
 
-### Task
+* Ruby version
 
-Your warmup task is to write a simple AJAX proxy by using a Rails server and HTTParty, to respond to an AJAX request made in the browser (in the Chrome Developer console will be fine, to test it, but you'll probably want jQuery to be loaded) by retrieving the contents of any specified URL for you, and passing it back to your AJAX Javascript handler, thereby getting around the CORS security restrictions.
+* System dependencies
 
-Your Rails server will need only one route, one controller, and one action. This action should take the URL specified on the query string, retrieve its data, and pass it back to your AJAX request in the browser, as a JSON object with a `content` key. To avoid the same CORS security problems from being thrown by your proxy, you will need to look up how to tell Rails to set the correct headers to allow any CORS request.
+* Configuration
 
-Example of proxy usage:
-```javascript
-$.getJSON('http://localhost:3000/getpage?url=http://smh.com.au').
-done( res => {
-  console.log(res.content); // This should output the HTML of the SMH home page
-});
-```
+* Database creation
 
-#### BONUS
-Add a `password=chicken` key-value pair to the querystring for the Rails URL, and have the Rails controller action check that the password is correct before retrieving the remote page, to prevent randos from using your proxy. If the password is not correct, return a JSON object containing an error message.
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
