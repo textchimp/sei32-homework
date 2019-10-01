@@ -20,9 +20,11 @@
 #menu
 # loop do
 
+require 'colorize'
+
 def bmi(weight, height)
   result = weight / height
-if result > 20 && result < 25
+  if result > 20 && result < 25
     puts "You're in a healthy BMI range"
   elsif result > 25 && result <30
     puts "Your BMI number is out of the recommended range"
@@ -30,11 +32,12 @@ if result > 20 && result < 25
     puts "Your BMI number is out of the recommended range"
   else
     puts "Time to make some life changes"
+  end
 end
 
 
 
-require 'colorize'
+
 
  loop do
 
@@ -44,7 +47,7 @@ puts "Addition: Press 1"
 puts "Subtraction: Press 2"
 puts "Multiplication: Press 3"
 puts "Division: Press 4"
-puts "Square Root: Press 5"
+puts "Exponent: Press 5"
 puts "BMI calculator: Press 6"
 
 selection = gets.to_i
@@ -81,9 +84,9 @@ when 5 then
   y = gets.to_f
  puts "#{x} to the power of #{y} = #{x ** y}".green
 when 6 then
-  put "What is your body mass?"
+  puts "What is your body mass?"
   x = gets.to_f
-  put "What is your height?"
+  puts "What is your height?"
   y = gets.to_f
   puts "Your BMI is #{x / y} : #{bmi(x, y)}".green
 

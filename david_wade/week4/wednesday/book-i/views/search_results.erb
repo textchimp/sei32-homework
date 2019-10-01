@@ -1,0 +1,10 @@
+<h2>Book search results: </h2>
+
+
+<% @results.each do|book| %>
+
+<p><%  book['title'] %></p>
+
+<p><% book['authors'] %></p>
+
+<%= end %>

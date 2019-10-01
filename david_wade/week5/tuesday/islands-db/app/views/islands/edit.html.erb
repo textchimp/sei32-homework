@@ -1,0 +1,32 @@
+<h2>Edit: <%= @island.name %></h2>
+
+<form action="<%= island_path(@island.id) %>" method="post">
+
+  <label>
+    Name: <input type="text" name="name" value="<%= @island.name %>">
+  </label>
+  <br>
+  <label>
+    Demonym: <input type="text" name="demonym" value="<%= @island.demonym %>">
+  </label>
+  <br>
+  <label>
+    Capital: <input type="text" name="capital" value="<%= @island.capital %>">
+  </label>
+  <br>
+  <label>
+    Currency: <input type="text" name="currency" value="<%= @island.currency %>">
+  </label>
+  <br>
+  <label>
+    Area: <input type="text" name="area" value="<%= @island.area %>">
+  </label>
+  <br>
+  <label>
+    Image: <input type="text" name="image" value="<%= @island.image %>">
+  </label>
+  <br>
+  <input type="submit" name="" value="update">
+
+
+</form>
