@@ -56,4 +56,4 @@ group :development, :test do
 end
 
 # Added at 2019-06-24 10:13:15 +1000 by textchimp:
-gem "httparty", "~> 0.17.0"
+gem "httparty", "~> 0.21.0"
